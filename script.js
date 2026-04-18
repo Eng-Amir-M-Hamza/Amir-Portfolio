@@ -1,1 +1,1 @@
-console.log("Portfolio Loaded Successfully");
+console.log("Cinematic Portfolio Loaded");
