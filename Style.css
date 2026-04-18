@@ -1,0 +1,27 @@
+body {
+    background:#0a0a0a;
+    color:white;
+    font-family:Arial;
+    margin:0;
+}
+
+header {
+    text-align:center;
+    padding:50px;
+}
+
+section {
+    padding:40px;
+}
+
+.card {
+    background:#111;
+    padding:20px;
+    margin-top:20px;
+    border-radius:10px;
+}
+
+img {
+    width:100%;
+    border-radius:8px;
+}
