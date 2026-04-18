@@ -1,12 +1,12 @@
-const sections = document.querySelectorAll(".glass");
+const elements = document.querySelectorAll(".glass, .card");
 
 function reveal() {
-sections.forEach(sec => {
-const top = sec.getBoundingClientRect().top;
+elements.forEach(el => {
+const top = el.getBoundingClientRect().top;
 
 if (top < window.innerHeight - 100) {
-sec.style.opacity = 1;
-sec.style.transform = "translateY(0)";
+el.style.opacity = 1;
+el.style.transform = "translateY(0)";
 }
 });
 }
@@ -14,4 +14,4 @@ sec.style.transform = "translateY(0)";
 window.addEventListener("scroll", reveal);
 reveal();
 
-console.log("FAANG Elite Case Study System Loaded");
+console.log("FAANG Absolute Product System Loaded");
