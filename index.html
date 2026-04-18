@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Amir Portfolio</title>
+<title>Amir | Cinematic BIM Portfolio</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- BACKGROUND -->
+<div class="bg"></div>
+
+<!-- NAV -->
 <nav>
 <a href="#home">Home</a>
 <a href="#projects">Projects</a>
@@ -16,57 +20,62 @@
 </nav>
 
 <!-- HERO -->
-<section id="home" class="hero">
+<section id="home" class="hero fade">
 <h1 class="glow">Eng. Amir Mohamed Hamza</h1>
 
 <p class="typing">
-BIM / VDC Engineer | Revit Add-ins | Dynamo | Navisworks Coordination
+BIM / VDC Engineer • Revit Add-ins • Dynamo Automation • Navisworks Coordination
 </p>
 
+<div class="buttons">
+<button class="btn">View Projects</button>
+<button class="btn-outline">Contact Me</button>
+</div>
+
 <p class="sub">
-4+ Years Experience in Mega Projects (Microsoft Data Centers, Hospitals, KSA)
+4+ Years Experience | Microsoft Data Centers | Hospitals | Mega Projects
 </p>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects">
-<h2>🏢 Featured Projects</h2>
+<section id="projects" class="fade">
+<h2>🎬 Featured Projects</h2>
 
 <div class="grid">
 
 <div class="card">
 <h3>Microsoft Data Centers (USA)</h3>
-<p>LOD 400 BIM execution, clash-free coordination.</p>
+<p>LOD 400 BIM execution model with clash-free coordination.</p>
 <img src="images/projects/dc.png">
 </div>
 
 <div class="card">
 <h3>Magdy Yacoub Hospital</h3>
-<p>Electrical X-ray room design & coordination.</p>
+<p>Medical electrical systems & X-ray rooms coordination.</p>
 <img src="images/projects/hospital.png">
 </div>
 
 <div class="card">
-<h3>KSA Projects</h3>
-<p>Yacht Club & Mega infrastructure works.</p>
+<h3>KSA Mega Projects</h3>
+<p>Electrical infrastructure & BIM modeling.</p>
 </div>
 
 </div>
 </section>
 
 <!-- ADDINS -->
-<section id="addins">
-<h2>🔥 Revit Add-ins</h2>
+<section id="addins" class="fade">
+<h2>⚡ Revit Add-ins (ENGINE LEVEL)</h2>
 
 <div class="card">
 <p>
-Custom C# tools for automating Revit workflows:
+Custom C# automation tools developed to:
 </p>
 
 <ul>
-<li>Shop drawings automation</li>
-<li>Schedules & BOQ generation</li>
-<li>Model optimization</li>
+<li>Automate shop drawings</li>
+<li>Generate schedules & BOQ</li>
+<li>Speed up Revit workflows</li>
 </ul>
 
 <img src="images/addins/toolbox.png">
@@ -74,12 +83,12 @@ Custom C# tools for automating Revit workflows:
 </section>
 
 <!-- DYNAMO -->
-<section id="dynamo">
+<section id="dynamo" class="fade">
 <h2>⚙️ Dynamo Automation</h2>
 
 <div class="card">
 <p>
-Scripts for routing, scheduling, and BIM data extraction.
+Automation scripts for routing, scheduling, and BIM data extraction.
 </p>
 
 <img src="images/dynamo/script1.png">
@@ -87,20 +96,19 @@ Scripts for routing, scheduling, and BIM data extraction.
 </section>
 
 <!-- NAVIS -->
-<section id="navis">
+<section id="navis" class="fade">
 <h2>🧭 Navisworks Coordination</h2>
 
 <div class="card">
 <p>
-Clash detection, resolution, and multi-discipline coordination
-for construction-ready models.
+Clash detection, resolution, and zero-clash BIM delivery for construction execution.
 </p>
 </div>
 </section>
 
 <!-- CONTACT -->
-<section>
-<h2>📞 Contact</h2>
+<section class="fade">
+<h2>📡 Contact</h2>
 
 <div class="card">
 <p>Email: Eng.Amir.M.Hamza@gmail.com</p>
@@ -109,6 +117,8 @@ for construction-ready models.
 </div>
 
 </section>
+
+<script src="script.js"></script>
 
 </body>
 </html>
