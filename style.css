@@ -1,15 +1,35 @@
 body {
 margin:0;
 font-family:-apple-system, BlinkMacSystemFont, sans-serif;
-background: #000814;
+background: radial-gradient(circle at top, #000814, #000);
 color:white;
 overflow-x:hidden;
+}
+
+/* NAV */
+nav {
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:center;
+gap:25px;
+padding:15px;
+background:rgba(0,0,0,0.5);
+backdrop-filter:blur(12px);
+z-index:999;
+}
+
+nav a {
+color:#00eaff;
+text-decoration:none;
 }
 
 /* HERO */
 .hero {
 height:100vh;
 display:flex;
+flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
@@ -18,23 +38,16 @@ background: radial-gradient(circle at top, #001d3d, #000);
 
 .title {
 font-size:48px;
-font-weight:600;
 color:#ffffff;
 }
 
-.subtitle {
-opacity:0.7;
-margin-top:10px;
-}
-
 .typing {
-margin-top:20px;
-color:#00eaff;
 border-right:2px solid #00eaff;
 white-space:nowrap;
 overflow:hidden;
 width:0;
 animation: typing 3s steps(60,end) forwards;
+color:#00eaff;
 }
 
 @keyframes typing {
@@ -42,25 +55,35 @@ from {width:0}
 to {width:100%}
 }
 
-/* SECTIONS */
+.sub {
+opacity:0.7;
+margin-top:10px;
+}
+
+/* BUTTONS */
+.buttons {
+margin-top:20px;
+}
+
+.btn {
+background:#00eaff;
+border:none;
+padding:10px 20px;
+margin:5px;
+cursor:pointer;
+}
+
+.btn-outline {
+background:transparent;
+border:1px solid #00eaff;
+color:#00eaff;
+padding:10px 20px;
+cursor:pointer;
+}
+
+/* SECTIONS (SAFE - NO INVISIBLE BUGS) */
 .section {
-padding:120px 12%;
-opacity:0;
-transform:translateY(30px);
-transition:1s;
-}
-
-.section.show {
-opacity:1;
-transform:translateY(0);
-}
-
-/* GLASS STYLE */
-.glass {
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(10px);
-border-radius:20px;
-border:1px solid rgba(255,255,255,0.1);
+padding:100px 10%;
 }
 
 /* GRID */
@@ -72,27 +95,20 @@ gap:20px;
 
 /* CARDS */
 .card {
-background:rgba(255,255,255,0.04);
-border-radius:16px;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(0,234,255,0.2);
 padding:20px;
-transition:0.4s;
-border:1px solid rgba(255,255,255,0.08);
+border-radius:14px;
+transition:0.3s;
 }
 
 .card:hover {
 transform:translateY(-6px);
-box-shadow:0 10px 40px rgba(0,234,255,0.15);
+box-shadow:0 0 40px #00eaff33;
 }
 
-/* IMAGES */
 img {
 width:100%;
-border-radius:12px;
+border-radius:10px;
 margin-top:10px;
-}
-
-/* CONTACT */
-.contact {
-line-height:1.8;
-opacity:0.8;
 }
