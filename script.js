@@ -1,16 +1,14 @@
 const sections = document.querySelectorAll(".section");
 
+/* SAFE: no invisible bugs */
 const reveal = () => {
 sections.forEach(sec => {
-const top = sec.getBoundingClientRect().top;
-
-if(top < window.innerHeight - 120){
-sec.classList.add("show");
-}
+sec.style.opacity = 1;
+sec.style.transform = "translateY(0)";
+sec.style.transition = "1s ease";
 });
 };
 
-window.addEventListener("scroll", reveal);
 reveal();
 
-console.log("Apple-level portfolio loaded");
+console.log("God Mode v2 Stable Cinematic Loaded");
