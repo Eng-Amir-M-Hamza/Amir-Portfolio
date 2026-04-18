@@ -1,62 +1,40 @@
 body {
 margin:0;
-font-family:Arial;
-background: radial-gradient(circle at top, #000814, #000);
+font-family:-apple-system, BlinkMacSystemFont, sans-serif;
+background: #000814;
 color:white;
 overflow-x:hidden;
-}
-
-/* BACKGROUND GLOW */
-.bg {
-position:fixed;
-width:100%;
-height:100%;
-background: radial-gradient(circle at center, #001d3d, #000);
-z-index:-1;
-}
-
-/* NAV */
-nav {
-position:fixed;
-top:0;
-width:100%;
-display:flex;
-justify-content:center;
-gap:25px;
-padding:15px;
-background:rgba(0,0,0,0.5);
-backdrop-filter:blur(12px);
-z-index:1000;
-}
-
-nav a {
-color:#00eaff;
-text-decoration:none;
 }
 
 /* HERO */
 .hero {
 height:100vh;
 display:flex;
-flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
+background: radial-gradient(circle at top, #001d3d, #000);
 }
 
-.glow {
+.title {
 font-size:48px;
-color:#00eaff;
-text-shadow:0 0 30px #00eaff;
+font-weight:600;
+color:#ffffff;
 }
 
-/* TYPING EFFECT */
+.subtitle {
+opacity:0.7;
+margin-top:10px;
+}
+
 .typing {
+margin-top:20px;
+color:#00eaff;
 border-right:2px solid #00eaff;
 white-space:nowrap;
 overflow:hidden;
 width:0;
-animation: typing 3s steps(70,end) forwards;
+animation: typing 3s steps(60,end) forwards;
 }
 
 @keyframes typing {
@@ -64,38 +42,25 @@ from {width:0}
 to {width:100%}
 }
 
-/* BUTTONS */
-.buttons {
-margin-top:20px;
-}
-
-.btn {
-background:#00eaff;
-border:none;
-padding:10px 20px;
-cursor:pointer;
-margin:5px;
-}
-
-.btn-outline {
-background:transparent;
-border:1px solid #00eaff;
-color:#00eaff;
-padding:10px 20px;
-cursor:pointer;
-}
-
 /* SECTIONS */
-section {
-padding:120px 10%;
+.section {
+padding:120px 12%;
 opacity:0;
-transform:translateY(40px);
+transform:translateY(30px);
 transition:1s;
 }
 
-section.show {
+.section.show {
 opacity:1;
 transform:translateY(0);
+}
+
+/* GLASS STYLE */
+.glass {
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+border-radius:20px;
+border:1px solid rgba(255,255,255,0.1);
 }
 
 /* GRID */
@@ -107,20 +72,27 @@ gap:20px;
 
 /* CARDS */
 .card {
-background:rgba(255,255,255,0.05);
-border:1px solid rgba(0,234,255,0.2);
+background:rgba(255,255,255,0.04);
+border-radius:16px;
 padding:20px;
-border-radius:14px;
 transition:0.4s;
+border:1px solid rgba(255,255,255,0.08);
 }
 
 .card:hover {
-transform:scale(1.03);
-box-shadow:0 0 40px #00eaff33;
+transform:translateY(-6px);
+box-shadow:0 10px 40px rgba(0,234,255,0.15);
 }
 
+/* IMAGES */
 img {
 width:100%;
-border-radius:10px;
+border-radius:12px;
 margin-top:10px;
+}
+
+/* CONTACT */
+.contact {
+line-height:1.8;
+opacity:0.8;
 }
