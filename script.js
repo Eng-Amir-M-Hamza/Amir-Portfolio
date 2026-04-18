@@ -1,11 +1,12 @@
-const sections = document.querySelectorAll(".reveal");
+const sections = document.querySelectorAll(".glass");
 
 function reveal() {
 sections.forEach(sec => {
 const top = sec.getBoundingClientRect().top;
 
-if (top < window.innerHeight - 120) {
-sec.classList.add("show");
+if (top < window.innerHeight - 100) {
+sec.style.opacity = 1;
+sec.style.transform = "translateY(0)";
 }
 });
 }
@@ -13,4 +14,4 @@ sec.classList.add("show");
 window.addEventListener("scroll", reveal);
 reveal();
 
-console.log("FAANG Ultra Cinematic Portfolio Loaded");
+console.log("FAANG Elite Case Study System Loaded");
