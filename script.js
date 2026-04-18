@@ -1,13 +1,16 @@
-const sections = document.querySelectorAll(".fade");
+const sections = document.querySelectorAll(".section");
 
-window.addEventListener("scroll", () => {
+const reveal = () => {
 sections.forEach(sec => {
-const pos = sec.getBoundingClientRect().top;
+const top = sec.getBoundingClientRect().top;
 
-if(pos < window.innerHeight - 100){
+if(top < window.innerHeight - 120){
 sec.classList.add("show");
 }
 });
-});
+};
 
-console.log("Hollywood Portfolio Loaded");
+window.addEventListener("scroll", reveal);
+reveal();
+
+console.log("Apple-level portfolio loaded");
