@@ -2,9 +2,17 @@ body {
 margin:0;
 font-family:Arial;
 color:white;
-background: radial-gradient(circle at top, #001427, #000);
+background: linear-gradient(-45deg, #000000, #001427, #00263d, #000814, #001d3d, #000000);
+background-size: 400% 400%;
+animation: gradientFlow 18s ease infinite;
 overflow-x:hidden;
 padding-top:70px;
+}
+
+@keyframes gradientFlow {
+0%   { background-position: 0% 50%; }
+50%  { background-position: 100% 50%; }
+100% { background-position: 0% 50%; }
 }
 
 /* NAVBAR */
@@ -206,4 +214,58 @@ transition:0.3s;
 .home-btn:hover {
 background:rgba(0,234,255,0.3);
 transform:scale(1.05);
+}
+
+/* FILTER TABS */
+.filter-tabs {
+display:flex;
+gap:12px;
+margin:20px 0 30px;
+flex-wrap:wrap;
+}
+
+.tab-btn {
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(0,234,255,0.3);
+color:white;
+padding:8px 18px;
+border-radius:20px;
+cursor:pointer;
+font-size:14px;
+font-family:Arial;
+transition:0.3s;
+}
+
+.tab-btn:hover {
+background:rgba(0,234,255,0.15);
+}
+
+.tab-btn.active {
+background:#00eaff;
+color:#001427;
+font-weight:bold;
+border-color:#00eaff;
+}
+
+/* DISCIPLINE TAG CHIPS */
+.tag-chip {
+display:inline-block;
+font-size:11px;
+font-weight:bold;
+padding:3px 10px;
+border-radius:20px;
+margin-bottom:10px;
+letter-spacing:0.5px;
+}
+
+.tag-elec {
+background:rgba(0,234,255,0.15);
+color:#00eaff;
+border:1px solid rgba(0,234,255,0.4);
+}
+
+.tag-mech {
+background:rgba(255,153,0,0.15);
+color:#ff9900;
+border:1px solid rgba(255,153,0,0.4);
 }
